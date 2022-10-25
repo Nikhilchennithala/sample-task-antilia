@@ -1,0 +1,9 @@
+<div class="main mt-5">
+    <span> <button (click)="person()" [ngStyle]="{'background-color': isPersonInfo ? 'blue' : '' }">Personel info</button> </span>
+    <span> <button (click)="location()" [ngStyle]="{'background-color': isLocation ? 'blue' : '' }" disabled>Location</button> </span>
+    <span> <button (click)="social()" [ngStyle]="{'background-color': isSocial ? 'blue' : '' }" disabled>Social links</button> </span>
+    <span> <button (click)="contact()" [ngStyle]="{'background-color': isContact ? 'blue' : '' }" disabled>Contact info</button> </span>
+    <span> <button (click)="skill()" [ngStyle]="{'background-color': isSkill ? 'blue' : '' }" disabled>Skills</button> </span>
+    <span> <button (click)="additional()" [ngStyle]="{'background-color': isAddition ? 'blue' : '' }" disabled>Additional info</button> </span>
+    <span> <button (click)="policy()" [ngStyle]="{'background-color': isPolicy ? 'blue' : '' }">Privacy policy</button> </span>
+</div>

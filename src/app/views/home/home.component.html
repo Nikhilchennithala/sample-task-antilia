@@ -1,0 +1,10 @@
+<app-header></app-header>
+<app-menu-buttons (newClickEvent)="newClickEvent($event)"></app-menu-buttons>
+<app-personel-info  (newClickEvent)="newClickEvent($event)" *ngIf="value.value === 'person'"></app-personel-info>
+<app-location *ngIf="value.value === 'location'"></app-location>
+<app-social-link *ngIf="value.value === 'social'"></app-social-link>
+<app-contact-info *ngIf="value.value === 'contact'"></app-contact-info>
+<app-skills  *ngIf="value.value === 'skill'"></app-skills>
+<app-additional-info *ngIf="value.value === 'additional'"></app-additional-info>
+<app-privacy-policy (newClickEvent)="newClickEvent($event)" *ngIf="value.value === 'policy'"></app-privacy-policy>
+<app-table *ngIf="value.value === 'table'"></app-table>

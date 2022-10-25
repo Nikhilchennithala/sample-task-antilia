@@ -1,0 +1,51 @@
+<div class="main">
+    <form [formGroup]="personalDetails" id="msform">
+        <h2 class="fs-title">Personal Details</h2>
+            <div class="row">
+                <div class="col-4">
+                    <label for="">Your name</label><span class="text-danger">*</span>
+                    <input type="text" formControlName="name"  [ngClass]="{ 'is-invalid': personal.name.errors }" placeholder="Enter your name"/>
+                    <div *ngIf="personalDetails.controls.name.errors">
+                        <div *ngIf="personal.name.errors?.required" class="text-danger">*Name is required</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label for="">Email</label><span class="text-danger">*</span>
+                    <input type="text" formControlName="email" name="email" placeholder="Enter your Email"/>
+                    <div *ngIf="personalDetails.controls.email.errors">
+                        <div *ngIf="personal.email.errors?.required" class="text-danger">*Email is required</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label for="">Birthday</label><span class="text-danger">*</span>
+                    <input type="date" formControlName="birthday" name="birthday"/>
+                    <div *ngIf="personalDetails.controls.birthday.errors">
+                    <div *ngIf="personal.birthday.errors?.required" class="text-danger">*Birthday is required</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label for="">Gender</label><span class="text-danger">*</span>
+                    <select name="" id="" formControlName="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <div *ngIf="personalDetails.controls.gender.errors">
+                    <div *ngIf="personal.gender.errors?.required" class="text-danger">Gender is required</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label for="">Martial status</label><span class="text-danger">*</span>
+                    <select name="" id="" formControlName="status">
+                        <option value="married">Married</option>
+                        <option value="unmarrried">Unmarried</option>
+                    </select>
+                    <div *ngIf="personalDetails.controls.status.errors">
+                    <div *ngIf="personal.status.errors?.required" class="text-danger">Martial status is required</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input (click)="next()" type="button" name="next" class="next action-button" value="Next"/>
+            </div>
+    </form>
+</div>

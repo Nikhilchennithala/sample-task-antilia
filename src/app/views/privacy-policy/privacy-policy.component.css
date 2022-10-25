@@ -1,0 +1,12 @@
+.main {
+    width: 80%;
+    margin: auto;
+}
+section {
+    width: 100%;
+    text-align: center;
+}
+button {
+    width: 200px;
+    border-radius: 5px;
+}
